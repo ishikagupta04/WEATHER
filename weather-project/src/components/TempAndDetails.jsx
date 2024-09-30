@@ -74,7 +74,7 @@ const TempAndDetails = ({ weather:{
         <img src={icon} alt="weather icon" className="w-20" />
         <p className="text-5xl">{`${temp.toFixed()}°`}</p>
 
-        <div className="flex flex-col space-y-3 items-start">
+        <div className="flex flex-col space-y-3 items-start max-sm:hidden ">
           {verticalDel.map(({ id, Icon, title, value }) => (
             <div
               key={id}
@@ -88,7 +88,7 @@ const TempAndDetails = ({ weather:{
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center space-x-10 text-sm py-3">
+      <div className="flex flex-row items-center justify-center space-x-10 text-sm py-3 max-sm:hidden">
         {
             horizontalDel.map(({id, Icon , title, value})=>(
                 <div key={id} className="flex flex-row items-center ">
